@@ -1,0 +1,9 @@
+---
+- name: copying file to remote
+  hosts: all
+  become: true
+  tasks:
+    - name: copy files
+      copy:
+        src: /home/ec2-user/myfiles.txt
+        dest: /tmp/

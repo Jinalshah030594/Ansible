@@ -1,0 +1,12 @@
+---
+- name: User Mgm
+  hosts: all
+  become: true
+  tasks:
+  - name: delete User
+    user:
+      name: nick
+      comment: delete user adding for QA team
+      state: absent
+      remove: yes
+

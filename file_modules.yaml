@@ -1,0 +1,17 @@
+---
+- name: File Module
+  hosts: all
+  become: true
+  tasks:
+    - name: creating a file
+      file:
+        path: /tmp/newfile.txt
+        state: absent
+        owner: jinal
+        mode: u=rwx,g=rw,o=r
+    - name: craeting a directory
+      file:
+        path: /tmp/myfolder
+        state: directory
+
+

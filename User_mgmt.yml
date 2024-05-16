@@ -1,0 +1,13 @@
+---
+- name: User Mgm
+  hosts: all
+  become: true
+  tasks:
+  - name: User creation
+    user:
+      name: Nick
+      comment: new user adding for QA team
+      home: /home/nick
+      shell: /bin/bash
+~     group: QA
+~

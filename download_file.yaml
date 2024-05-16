@@ -1,0 +1,9 @@
+---
+- name: Download files
+  hosts: all
+  tasks:
+  - name: Download file
+    get_url:
+      url: https://www.python.org/ftp/python/3.12.3/python-3.12.3-amd64.exe
+      dest: /tmp/script/python-3.12.3-amd64.exe
+      mode: 0777

@@ -1,0 +1,10 @@
+---
+- name: modify cron
+  hosts: all
+  become: true
+  tasks:
+  - name: Remove cron
+    cron:
+      name: Run Test Script
+      state: absent
+      user: jinal
